@@ -26,19 +26,14 @@ public class Student {
         transactions.add(t);
     }
 
-    public ArrayList<Transaction> getTransactionsByDate(int month, int day){
-        ArrayList<Transaction> given = new ArrayList<Transaction>();
-
-        for(Transaction t : transactions){
-            if(month == t.getMonth() && day == t.getDay()){
+    public ArrayList<Transaction> getTransactionsByDate(int month, int day) {
+        ArrayList<Transaction> given = new ArrayList<>();
+        for (Transaction t : transactions) {
+            if (month == t.getMonth() && day == t.getDay()) {
                 given.add(t);
             }
         }
-        if(given.size() == 0){
-            return null;
-        } else {
-            return given;
-        }
+        return given;
     }
 
 

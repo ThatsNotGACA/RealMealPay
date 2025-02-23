@@ -10,9 +10,9 @@ public class Manager {
     public String transactionsOnDate(int month, int day) {
         String s = "";
         for (Student stud : students) {
-            ArrayList<Transaction> tByDay = stud.getTransactionsByDate(month, day);
-            if (!tByDay.isEmpty()) {
-                s += tByDay.toString() + " by: " + stud.getName() + " ID: " + stud.getID() + "\n";
+            ArrayList<Transaction> perDay = stud.getTransactionsByDate(month, day);
+            if (!perDay.isEmpty()) {
+                s += perDay.toString() + " by: " + stud.getName() + " ID: " + stud.getID() + "\n";
             }
         }
         return s;
@@ -22,6 +22,7 @@ public class Manager {
         for (Student stud : students) {
             if (stud.getID() == id) {
                 stud.chargeLunch(month, day);
+                return; 
             }
         }
         System.out.println("No student found with ID: " + id);
@@ -39,6 +40,7 @@ public class Manager {
         for (Student stud : students) {
             if (stud.getID() == id) {
                 stud.addBalance(month, day, balance);
+                return;
             }
         }
         System.out.println("No student found with ID: " + id);
@@ -48,6 +50,7 @@ public class Manager {
         for (Student stud : students) {
             if (stud.getID() == id) {
                 stud.chargeLunch(month, day);
+                return;
             }
         }
         System.out.println("No student found with ID: " + id);
