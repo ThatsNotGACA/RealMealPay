@@ -21,7 +21,7 @@ public class Student {
         transactions.add(t);
     }
     public void addBalance(int month, int day, int amount){
-        balance+=amount;
+        balance += amount;
         Transaction t = new Transaction(month, day, amount);
         transactions.add(t);
     }
