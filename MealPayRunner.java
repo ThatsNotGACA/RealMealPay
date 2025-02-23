@@ -3,10 +3,10 @@ public class MealPayRunner {
         Manager m = new Manager();
 
         System.out.println("Adding some students");
-        m.addStudents("Bobby Bobbs");
-        m.addStudents("Joe Schmo");
-        m.addStudents("Kelly Shelly");
-        m.addStudents("Bobby Bobbs");
+        m.addStudent("Bobby Bobbs");
+        m.addStudent("Joe Schmo");
+        m.addStudent("Kelly Shelly");
+        m.addStudent("Bobby Bobbs");
 
         System.out.println(m);
 
